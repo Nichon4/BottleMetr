@@ -1,0 +1,59 @@
+{
+  "kilbeggan": {
+    "name": "Kilbeggan 0,7l",
+    "measures": [
+      { "h": 0, "v": 0 },
+      { "h": 112, "v": 282},
+      { "h": 207, "v": 564},
+      { "h": 262, "v": 700 }
+    ],
+    "bounds": {
+      "top": -270,
+      "bottom": -8
+    },
+    "img": "/img/kilbeggan_70cl.png",
+    "miniImg": "/img/kilbeggan_70cl.png"
+  },
+  "bushmills": {
+    "name": "Bushmills 1l",
+    "measures": [
+      { "h": 0, "v": 0 },
+      { "h": 112, "v": 282},
+      { "h": 207, "v": 564},
+      { "h": 262, "v": 700 }
+    ],
+    "bounds": {
+      "top": -270,
+      "bottom": -8
+    },
+    "img": "/img/kilbeggan_70cl.png"
+  },
+  "tullamore": {
+    "name": "Tullamore 0,7l",
+    "measures": [
+      { "h": 0, "v": 0 },
+      { "h": 112, "v": 282},
+      { "h": 207, "v": 564},
+      { "h": 262, "v": 700 }
+    ],
+    "bounds": {
+      "top": -270,
+      "bottom": -8
+    },
+    "img": "/img/kilbeggan_70cl.png"
+  },
+  "jameson": {
+    "name": "Jameson 0,7l",
+    "measures": [
+      { "h": 0, "v": 0 },
+      { "h": 112, "v": 282},
+      { "h": 207, "v": 564},
+      { "h": 262, "v": 700 }
+    ],
+    "bounds": {
+      "top": -270,
+      "bottom": -8
+    },
+    "img": "/img/kilbeggan_70cl.png"
+  }
+}
