@@ -1,5 +1,5 @@
 {
-  "kilbeggan": {
+  "kilbeggan_07l": {
     "name": "Kilbeggan 0,7l",
     "measures": [
       { "h": 0, "v": 0 },
@@ -12,7 +12,7 @@
       "bottom": -8
     },
     "img": "/img/kilbeggan_70cl.png",
-    "miniImg": "/img/kilbeggan_70cl.png"
+    "miniImg": "/img/kilbeggan_mini.png"
   },
   "bushmills": {
     "name": "Bushmills 1l",
@@ -55,5 +55,18 @@
       "bottom": -8
     },
     "img": "/img/kilbeggan_70cl.png"
+  },
+  "bacardi_carta_blanca_1l": {
+    "name": "Bacardi Carta Blanca 1l",
+    "measures": [
+      { "h": 0, "v": 0 },
+      { "h": 262, "v": 700 }
+    ],
+    "bounds": {
+      "top": -270,
+      "bottom": -8
+    },
+    "img": "/img/bacardi-Carta-Blanca-1L.png",
+    "miniImg": "/img/bacardi-Carta-Blanca_mini.png"
   }
 }

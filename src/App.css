@@ -3,6 +3,8 @@ globals: {
 }
 
 .App {
+  height: 100%;
+  width: 375px;
   background-color: #000000;
   text-align: left;
 }

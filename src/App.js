@@ -6,6 +6,7 @@ import MainMenu from './components/MainMenu.js';
 import About from './components/about.js';
 import SearchField from './components/SearchField.js';
 import BottleMetr from './components/BottleMetr.js';
+import BottleList from './components/BottleList.js';
 
 class App extends React.Component {
 
@@ -25,6 +26,7 @@ class App extends React.Component {
         </header>
         <Route exact path="/" component={MainMenu} />
         <Route path="/about" component={About} />
+        <Route path="/BottleList" component={BottleList} />
         <Route path="/BottleMetr/:bottle" render={(props) => <BottleMetr {...props} /> } />
         <Route exact path="/BottleMetr/" render={(props) => <BottleMetr {...props} /> } />
       </div>

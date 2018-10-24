@@ -2,7 +2,6 @@ import React from 'react';
 import Draggable from 'react-draggable';
 import bottles from "../data/bottles.json";
 import MeasureLine from "../img/MeasureLine.js";
-import './BottleMetr.scss';
 
 
 class BottleMetr extends React.Component {
