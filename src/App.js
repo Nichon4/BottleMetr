@@ -22,7 +22,9 @@ class App extends React.Component {
             <text style={{ padding: 5 }}>BottleMetr</text>
           </p>
           </Link>
-          { this.props.location.pathname !== "/" ? false : true && <SearchField/>}
+          {
+            ((this.props.location.pathname !== "/") && (this.props.location.pathname !== "/BottleList")) ? false : true && <SearchField/>
+        }
         </header>
         <Route exact path="/" component={MainMenu} />
         <Route path="/about" component={About} />

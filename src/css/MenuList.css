@@ -1,0 +1,31 @@
+ul.MenuList {
+  position: absolute;
+  width: 375px;
+  height: 450px;
+  background-color: #000000;
+  list-style: none;
+  padding-left: 0px;
+  margin: 0;
+}
+ul.MenuList:first-child {
+  padding-top: 10px;
+}
+.MenuList li {
+  height: 32px;
+  background-color: #8E8E93;
+  margin: 0 0 2px 0;
+  text-decoration: none;
+  font-size: 20px;
+  padding-left: 5px;
+}
+.MenuList li:visited {
+  text-decoration: none;
+}
+.MenuList a {
+  text-decoration: none;
+  color: #000;
+}
+.MenuList a * {
+  position: relative;
+  vertical-align: middle;
+}

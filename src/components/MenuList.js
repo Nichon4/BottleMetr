@@ -1,24 +1,36 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-
+import "../css/MenuList.css";
+import { IoIosListBox, IoIosBook, IoIosInformationCircle } from 'react-icons/io';
 
 const MenuList = props => {
 
-  const menuItems = {
-    BottleMetr: "BottleMetr",
-    BottleList: "Bottle List",
-    Inventory: "Your Inventory",
-    About: "About"
-  };
+  const menuItems = [
+    { name: "BottleMetr",
+      link: "BottleMetr"
+    },
+    { name: "Bottle List",
+      link: "BottleList",
+      icon: (<IoIosListBox />)
+    },
+    { name: "Your Inventory",
+      link: "Inventory",
+      icon: (<IoIosBook />)
+    },
+    { name: "About",
+      link: "about",
+      icon: (<IoIosInformationCircle />)
+    }
+  ];
 
-  const menuList = Object.keys(menuItems).map((obj) =>
-    <li key={obj}><Link to={obj}>{menuItems[obj]}</Link></li>
+  const menuList = menuItems.map((obj) =>
+    <Link to={obj.link}><li key={obj.link}>{obj.icon}<text> {obj.name}</text></li></Link>
   );
 
   console.log(menuList);
 
   return (
-    <ul>{menuList}</ul>
+    <ul className="MenuList">{menuList}</ul>
   );
 
 }

@@ -1,0 +1,17 @@
+
+.SearchField {
+  display: flex;
+  background:  rgba(142, 142, 147, 0.15);
+  color: #8E8E93;
+  border-radius: 7px;
+  position: relative;
+  top: 0;
+  height: 23px;
+  width: 343px;
+  font-size: 15px;
+  text-indent: 0px;
+  align-items: center;
+}
+.SearchField * {
+  padding-left: 5px;
+}

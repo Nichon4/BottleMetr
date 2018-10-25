@@ -2,6 +2,7 @@ ul.BottleList {
   background-color: #8E8E93;
   list-style: none;
   padding-left: 0px;
+  height: 450px;
 }
 
 .BottleList li {
