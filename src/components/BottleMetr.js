@@ -15,7 +15,7 @@ class BottleMetr extends React.Component {
   //console.log(bottles);
   curBottle = ( this.props.match.params.bottle == null ) ? "kilbeggan_07l" : this.props.match.params.bottle ;
   //  let BottleImg = bottles.bottle.img;
-  bottle = bottles.find( obj => obj.link == this.curBottle );
+  bottle = bottles.find( obj => obj.link === this.curBottle );
   bottleImg = this.bottle.img;
   handleDrag = (e, ui) => {
     const {x, y} = this.state.deltaPosition;

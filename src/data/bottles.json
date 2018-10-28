@@ -46,6 +46,7 @@
         "v": 700
       }
     ],
+    "miniImg": "/img/no_mini.png",
     "name": "Bushmills 1l"
   },
   {
@@ -74,6 +75,7 @@
         "v": 700
       }
     ],
+    "miniImg": "/img/no_mini.png",
     "name": "Jameson 0,7l"
   },
   {
@@ -102,6 +104,7 @@
         "v": 700
       }
     ],
+    "miniImg": "/img/no_mini.png",
     "name": "Jameson 1l"
   },
   {
@@ -159,6 +162,7 @@
         "v": 700
       }
     ],
+    "miniImg": "/img/no_mini.png",
     "name": "Tullamore 0,7l"
   }
 ]

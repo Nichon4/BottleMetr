@@ -1,0 +1,46 @@
+.SearchInput {
+  background-color: rgba(0, 0, 0, 0.0);
+  border: none;
+  width: 300px;
+}
+.SearchInput:focus {
+  color: #8E8E93;
+  border: none;
+  outline: none;
+}
+
+
+ul.SearchResult {
+  background-color: #8E8E93;
+  list-style: none;
+  padding-left: 0px;
+  height: 450px;
+}
+
+.SearchResult li {
+  margin: 2px 0 0 0;
+  padding-top: 5px;
+  padding-bottom: 2px;
+  background-color: #000000;
+  font-size: 17px;
+  text-decoration: none;
+  color: white;
+}
+.SearchResult li:visited {
+  text-decoration: none;
+}
+.SearchResult a {
+  text-decoration: none;
+  color: white;
+}
+.SearchResult img {
+  padding-left: 50px;
+  transform: translate(-50%);
+  width: auto;
+}
+.SearchResult text {
+  font-size: 20px;
+  position: absolute;
+  left: 45px;
+  padding-top: 4px;
+}
