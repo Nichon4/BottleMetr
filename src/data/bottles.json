@@ -1,72 +1,164 @@
-{
-  "kilbeggan_07l": {
-    "name": "Kilbeggan 0,7l",
-    "measures": [
-      { "h": 0, "v": 0 },
-      { "h": 112, "v": 282},
-      { "h": 207, "v": 564},
-      { "h": 262, "v": 700 }
-    ],
+[
+  {
+    "link": "bacardi_carta_blanca_1l",
     "bounds": {
       "top": -270,
       "bottom": -8
     },
-    "img": "/img/kilbeggan_70cl.png",
-    "miniImg": "/img/kilbeggan_mini.png"
-  },
-  "bushmills": {
-    "name": "Bushmills 1l",
-    "measures": [
-      { "h": 0, "v": 0 },
-      { "h": 112, "v": 282},
-      { "h": 207, "v": 564},
-      { "h": 262, "v": 700 }
-    ],
-    "bounds": {
-      "top": -270,
-      "bottom": -8
-    },
-    "img": "/img/kilbeggan_70cl.png"
-  },
-  "tullamore": {
-    "name": "Tullamore 0,7l",
-    "measures": [
-      { "h": 0, "v": 0 },
-      { "h": 112, "v": 282},
-      { "h": 207, "v": 564},
-      { "h": 262, "v": 700 }
-    ],
-    "bounds": {
-      "top": -270,
-      "bottom": -8
-    },
-    "img": "/img/kilbeggan_70cl.png"
-  },
-  "jameson": {
-    "name": "Jameson 0,7l",
-    "measures": [
-      { "h": 0, "v": 0 },
-      { "h": 112, "v": 282},
-      { "h": 207, "v": 564},
-      { "h": 262, "v": 700 }
-    ],
-    "bounds": {
-      "top": -270,
-      "bottom": -8
-    },
-    "img": "/img/kilbeggan_70cl.png"
-  },
-  "bacardi_carta_blanca_1l": {
-    "name": "Bacardi Carta Blanca 1l",
-    "measures": [
-      { "h": 0, "v": 0 },
-      { "h": 262, "v": 700 }
-    ],
-    "bounds": {
-      "top": -270,
-      "bottom": -8
-    },
+    "brand": "Bacardi",
     "img": "/img/bacardi-Carta-Blanca-1L.png",
-    "miniImg": "/img/bacardi-Carta-Blanca_mini.png"
+    "measures": [
+      {
+        "h": 0,
+        "v": 0
+      },
+      {
+        "h": 262,
+        "v": 700
+      }
+    ],
+    "miniImg": "/img/bacardi-Carta-Blanca_mini.png",
+    "name": "Bacardi Carta Blanca 1l"
+  },
+  {
+    "link": "bushmills_1l",
+    "bounds": {
+      "top": -270,
+      "bottom": -8
+    },
+    "brand": "Bushmills",
+    "img": "/img/kilbeggan_70cl.png",
+    "measures": [
+      {
+        "h": 0,
+        "v": 0
+      },
+      {
+        "h": 112,
+        "v": 282
+      },
+      {
+        "h": 207,
+        "v": 564
+      },
+      {
+        "h": 262,
+        "v": 700
+      }
+    ],
+    "name": "Bushmills 1l"
+  },
+  {
+    "link": "jameson_07",
+    "bounds": {
+      "top": -270,
+      "bottom": -8
+    },
+    "brand": "Jameson",
+    "img": "/img/kilbeggan_70cl.png",
+    "measures": [
+      {
+        "h": 0,
+        "v": 0
+      },
+      {
+        "h": 112,
+        "v": 282
+      },
+      {
+        "h": 207,
+        "v": 564
+      },
+      {
+        "h": 262,
+        "v": 700
+      }
+    ],
+    "name": "Jameson 0,7l"
+  },
+  {
+    "link": "jameson_10",
+    "bounds": {
+      "top": -270,
+      "bottom": -8
+    },
+    "brand": "Jameson",
+    "img": "/img/kilbeggan_70cl.png",
+    "measures": [
+      {
+        "h": 0,
+        "v": 0
+      },
+      {
+        "h": 112,
+        "v": 282
+      },
+      {
+        "h": 207,
+        "v": 564
+      },
+      {
+        "h": 262,
+        "v": 700
+      }
+    ],
+    "name": "Jameson 1l"
+  },
+  {
+    "link": "kilbeggan_07l",
+    "bounds": {
+      "top": -270,
+      "bottom": -8
+    },
+    "brand": "Kilbeggan",
+    "img": "/img/kilbeggan_70cl.png",
+    "measures": [
+      {
+        "h": 0,
+        "v": 0
+      },
+      {
+        "h": 112,
+        "v": 282
+      },
+      {
+        "h": 207,
+        "v": 564
+      },
+      {
+        "h": 262,
+        "v": 700
+      }
+    ],
+    "miniImg": "/img/kilbeggan_mini.png",
+    "name": "Kilbeggan 0,7l"
+  },
+  {
+    "link": "tullamore",
+    "bounds": {
+      "top": -270,
+      "bottom": -8
+    },
+    "brand": "Tullamore",
+    "img": "/img/kilbeggan_70cl.png",
+    "measures": [
+      {
+        "h": 0,
+        "v": 0
+      },
+      {
+        "h": 112,
+        "v": 282
+      },
+      {
+        "h": 207,
+        "v": 564
+      },
+      {
+        "h": 262,
+        "v": 700
+      }
+    ],
+    "name": "Tullamore 0,7l"
   }
-}
+]

@@ -13,9 +13,9 @@ class BottleMetr extends React.Component {
     bottleValue: 0,
   }
   //console.log(bottles);
-  curBottle = ( this.props.match.params.bottle == null ) ? "kilbeggan" : this.props.match.params.bottle ;
+  curBottle = ( this.props.match.params.bottle == null ) ? "kilbeggan_07l" : this.props.match.params.bottle ;
   //  let BottleImg = bottles.bottle.img;
-  bottle = bottles[this.curBottle];
+  bottle = bottles.find( obj => obj.link == this.curBottle );
   bottleImg = this.bottle.img;
   handleDrag = (e, ui) => {
     const {x, y} = this.state.deltaPosition;
@@ -25,6 +25,9 @@ class BottleMetr extends React.Component {
         y: y + ui.deltaY,
       }
     });
+    this.takeMeasure();
+  }
+  takeMeasure = () => {
     let measureBase = ( this.state.deltaPosition.y !== 0 ) ? this.bottle.measures.reduce(( acc, {h,v}, idx, list) => -this.state.deltaPosition.y > h ? [{h,v}, list[idx+1]]: acc, []) : [this.bottle.measures[0], this.bottle.measures[1]];
     console.log(measureBase);
     let k = (measureBase[1].v - measureBase[0].v)/(measureBase[1].h - measureBase[0].h);

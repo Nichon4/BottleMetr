@@ -4,12 +4,12 @@ import bottles from "../data/bottles.json";
 import "../css/BottleList.css";
 
 const BottleList = props => {
-  const bottleItemsGet = Object.keys(bottles).reduce((acc, cur, idx) => {
+  const bottleItemsGet = bottles.reduce((acc, cur, idx) => {
     acc.push(
       {
-        "link": cur,
-        "name": bottles[cur].name,
-        "img": ((bottles[cur].miniImg !== undefined ) ? bottles[cur].miniImg : "/img/no_mini.png" )
+        "link": cur.link,
+        "name": cur.name,
+        "img": ((cur.miniImg !== undefined ) ? cur.miniImg : "/img/no_mini.png" )
       }
     );
     return acc;
