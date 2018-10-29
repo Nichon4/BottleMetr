@@ -1,5 +1,6 @@
 .SearchInput {
   background-color: rgba(0, 0, 0, 0.0);
+  color: #8E8E93;
   border: none;
   width: 300px;
 }
@@ -12,6 +13,7 @@
 
 ul.SearchResult {
   background-color: #8E8E93;
+  color: white;
   list-style: none;
   padding-left: 0px;
   height: 450px;
