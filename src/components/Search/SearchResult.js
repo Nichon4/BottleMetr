@@ -1,12 +1,28 @@
 import React from 'react';
+import ListItem from "./ListItem.js";
+
 
 class SearchResult extends React.Component {
 
+  state = {
+    searchResult: this.props.searchResult.map( (obj, idx) => {
+      return(
+        <ListItem key={idx + "_" + obj.link} name={obj.name} link={`BottleMetr/${obj.link}`} img={obj.miniImg} />
+      );
+    })
+  }
+
+
   render() {
+    console.log(this.props.searchResult);
     return(
-      <div className="SearchResult">
-        <ul>
-          { (this.props.searchResult.length > 0) ? this.props.searchResult : "none"}
+      <div>
+        <ul className="SearchResult">
+          { this.props.searchResult.map( (obj, idx) => {
+            return(
+              <ListItem key={idx + "_" + obj.link} name={obj.name} link={`BottleMetr/${obj.link}`} img={obj.miniImg} />
+            );
+          }) }
         </ul>
       </div>
     )

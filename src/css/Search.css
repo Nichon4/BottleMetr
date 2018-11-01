@@ -1,8 +1,31 @@
+div>.SearchField {
+  display: flex;
+  background:  rgba(142, 142, 147, 0.15);
+  color: #8E8E93;
+  border-radius: 7px;
+  position: relative;
+  top: 0;
+  left: 10px;
+  height: 23px;
+  width: 348px;
+  font-size: 15px;
+  text-indent: 0px;
+  align-items: center;
+}
+div>.SearchField>input {
+  padding-left: 5px;
+}
+div>.SearchField * {
+  padding-left: 10px;
+}
+
 .SearchInput {
   background-color: rgba(0, 0, 0, 0.0);
   color: #8E8E93;
   border: none;
   width: 300px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-size: 15px;
 }
 .SearchInput:focus {
   color: #8E8E93;
@@ -15,6 +38,7 @@ ul.SearchResult {
   background-color: #8E8E93;
   color: white;
   list-style: none;
+  list-style-type: none;
   padding-left: 0px;
   height: 450px;
 }
