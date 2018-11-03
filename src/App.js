@@ -4,7 +4,7 @@ import { Route, Link } from 'react-router-dom';
 import MainMenu from './components/MainMenu.js';
 import About from './components/About.js';
 import SearchField from './components/SearchField.js';
-import Search from './components/Search.js';
+import Search from './components/Search/';
 import BottleMetr from './components/BottleMetr.js';
 import BottleList from './components/BottleList.js';
 import { Header, AppHeader } from "./layout/Header";
