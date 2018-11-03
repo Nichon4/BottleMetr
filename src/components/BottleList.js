@@ -1,36 +1,17 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
 import bottles from "../data/bottles.json";
-import "../css/BottleList.css";
+import { BottleListItem, BottleUl } from "../layout/BottleList";
 
-const BottleList = _ => {
-  const bottleItemsGet = bottles.reduce((acc, cur) => {
-    acc.push(
-      {
-        "link": cur.link,
-        "name": cur.name,
-        "img": ((cur.miniImg !== undefined ) ? cur.miniImg : "/img/no_mini.png" )
-      }
-    );
-    return acc;
-  }, []);
-
-  const bottleItems = bottleItemsGet.sort((a,b) =>
-    (a.name > b.name)
-      ? 1
-      : ((b.name > a.name) ? -1 : 0));
-
-  const bottleList = bottleItems.map((obj) =>
-    <li key={obj.link}>
-      <Link to={`BottleMetr/${obj.link}`}>
-        <img src={obj.img} alt={'bottleImage'}/>
-        <span>{obj.name}</span>
-      </Link>
-    </li>
+// TODO remove sorting and remap
+const BottleList = () => {
+  const bottleList = bottles
+    .map(({name, link, miniImg}) => ({ link, name, img: miniImg ? miniImg : "/img/no_mini.png" }))
+    .sort((a,b) => (a.name > b.name))
+    .map((bottle) => <BottleListItem key={bottle.link} {...bottle} />
   );
 
   return (
-    <ul className="BottleList">{bottleList}</ul>
+    <BottleUl>{bottleList}</BottleUl>
   )
 };
 
