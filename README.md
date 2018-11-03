@@ -14,7 +14,7 @@
 
 ### Dev run
 
-* npm start or yarn star (if you use yarn)
+* npm start or yarn start (if you use yarn)
 
 ### License 
 
