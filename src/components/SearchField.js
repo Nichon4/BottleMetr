@@ -8,7 +8,7 @@ class SearchField extends Component {
     return (
       <Link to="Search">
         <div className="SearchField">
-          <IoIosSearch/><text>Search bottle</text>
+          <IoIosSearch/><span>Search bottle</span>
         </div>
       </Link>
     )

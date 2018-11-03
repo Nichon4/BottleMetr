@@ -13,25 +13,21 @@ class Search extends React.Component {
   };
 
   SearchResult = () => {
-
     let Result = bottles.map( (obj) => (
       ( obj.name.toLowerCase().includes(this.state.searchRequest.toLowerCase()) ) ? (
         <li key={obj.link}>
           <Link to={`BottleMetr/${obj.link}`}>
-            <img src={obj.miniImg} />
-            <text>{obj.name}</text>
+            <img src={obj.miniImg} alt="bottleImage"/>
+            <span>{obj.name}</span>
           </Link>
         </li>
       ) : ''
     ));
-    // console.log(this.state.searchRequest);
-    // console.log(bottles[1].name.includes(this.state.searchRequest));
-    // console.log(bottles);
 
     return (
       <ul className="SearchResult">{Result}</ul>
     )
-  }
+  };
 
   render() {
     return (

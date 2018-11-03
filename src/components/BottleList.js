@@ -3,8 +3,8 @@ import {Link} from 'react-router-dom';
 import bottles from "../data/bottles.json";
 import "../css/BottleList.css";
 
-const BottleList = props => {
-  const bottleItemsGet = bottles.reduce((acc, cur, idx) => {
+const BottleList = _ => {
+  const bottleItemsGet = bottles.reduce((acc, cur) => {
     acc.push(
       {
         "link": cur.link,
@@ -13,15 +13,18 @@ const BottleList = props => {
       }
     );
     return acc;
-  }, [])
+  }, []);
 
-  const bottleItems = bottleItemsGet.sort((a,b) => (a.name > b.name) ? 1 : ((b.name > a.name) ? -1 : 0));
+  const bottleItems = bottleItemsGet.sort((a,b) =>
+    (a.name > b.name)
+      ? 1
+      : ((b.name > a.name) ? -1 : 0));
 
   const bottleList = bottleItems.map((obj) =>
     <li key={obj.link}>
       <Link to={`BottleMetr/${obj.link}`}>
-        <img src={obj.img} />
-        <text>{obj.name}</text>
+        <img src={obj.img} alt={'bottleImage'}/>
+        <span>{obj.name}</span>
       </Link>
     </li>
   );
@@ -29,6 +32,6 @@ const BottleList = props => {
   return (
     <ul className="BottleList">{bottleList}</ul>
   )
-}
+};
 
 export default BottleList;
