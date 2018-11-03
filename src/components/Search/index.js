@@ -5,35 +5,48 @@ import bottles from "../../data/bottles.json";
 import "../../css/Search.css";
 
 class Search extends React.Component {
-
-  state = {
-    searchRequest: "",
-    searchResult: [],
-    searchResultLimit: 5
+  constructor(props){
+    super(props);
+  
+    this.state = {
+      searchRequest: "",
+      searchResult: [],
+      searchResultLimit: 5
+    };
+    
+    this.handeSearchInputChange = this.handeSearchInputChange.bind(this);
+    this.searchMethod = this.searchMethod.bind(this);
   }
-
-  handeSearchInputChange = (event) => this.setState({ searchRequest: event.target.value, searchResult: this.searchMethod(event.target.value) })
-
-
-  searchMethod = (searchRequest) => {
-    let result = bottles.filter( ({name,link,miniImg}) => name.toLowerCase().includes(searchRequest.toLowerCase()) )
-                        .sort((a,b) => (a.name > b.name) ? 1 : ((b.name > a.name) ? -1 : 0));
-    result.length = this.state.searchResultLimit;
-    return result;
-  }
-
-
+  
   componentDidMount(){
     this.setState({searchResult: this.searchMethod(this.state.searchRequest)})
+  }
+
+  handeSearchInputChange(event) {
+    this.setState({
+      searchRequest: event.target.value,
+      searchResult: this.searchMethod(event.target.value)
+    });
+  }
+  
+  searchMethod(searchRequest) {
+    return bottles
+      .filter(({name}) => name.toLowerCase().includes(searchRequest.toLowerCase()) )
+      .sort((a,b) => a.name > b.name)
+      .slice(0, 5);
   }
 
   render() {
     return (
       <div>
-        <SearchInput onChange={this.handeSearchInputChange} value={this.state.searchRequest}/>
-        <SearchResult searchRequest={this.state.searchRequest}
+        <SearchInput
+          onChange={this.handeSearchInputChange}
+          value={this.state.searchRequest}
+        />
+        <SearchResult
+          searchRequest={this.state.searchRequest}
           searchResult={this.state.searchResult}
-          />
+        />
       </div>
     )
   }
