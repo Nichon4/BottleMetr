@@ -6,7 +6,7 @@ import '../css/SearchField.css';
 class SearchField extends Component {
   render() {
     return (
-      <Link to="Search">
+      <Link to="Search" className="SearchField">
         <div className="SearchField">
           <IoIosSearch/><span>Search bottle</span>
         </div>
