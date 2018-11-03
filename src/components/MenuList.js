@@ -1,7 +1,6 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
-import "../css/MenuList.css";
 import { IoIosListBox, IoIosBook, IoIosInformationCircle } from 'react-icons/io';
+import { MenuItem, MenuElement } from '../layout/MenuList'
 
 const menuItems = [
   { name: "BottleMetr",
@@ -22,17 +21,12 @@ const menuItems = [
 ];
 
 const MenuList = () => (
-  <ul className="MenuList">
+  <MenuItem>
     {
-      menuItems.map((obj) =>
-        <Link key={obj.link} to={obj.link}>
-          <li>
-            {obj.icon} <span> {obj.name}</span>
-          </li>
-        </Link>
-      )
+      menuItems.map((props) =>
+        <MenuElement key={props.link} {...props}/> )
     }
-  </ul>
+  </MenuItem>
 );
 
 export default MenuList;
