@@ -1,4 +1,4 @@
-globals: {
+globals {
     font-family: 'SF Pro Text';
 }
 
@@ -48,42 +48,6 @@ globals: {
 
 .MainMenu {
   background-color: #8E8E93;
-}
-
-.BottleMetr {
-  background-color: #000000;
-  position: relative;
-  width: 375px;
-  height: 450px;
-  color: white;
-}
-.BottleImg {
-  display: block;
-  position: relative;
-  height: 400px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  align-items: center;
-}
-.MeasureLine {
-
-}
-.rangeSlider {
-  position: relative;
-  bottom: 0px;
-}
-.measureValue1 {
-  color: #ff9500;
-  position: absolute;
-  bottom: 10px;
-  left: 36px;
-}
-.measureValue2 {
-  color: #ff9500;
-  position: absolute;
-  bottom: 10px;
-  right: 36px;
 }
 
 @keyframes App-logo-spin {
