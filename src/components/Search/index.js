@@ -7,17 +7,17 @@ import "../../css/Search.css";
 class Search extends React.Component {
   constructor(props){
     super(props);
-  
+
     this.state = {
       searchRequest: "",
       searchResult: [],
       searchResultLimit: 5
     };
-    
+
     this.handeSearchInputChange = this.handeSearchInputChange.bind(this);
     this.searchMethod = this.searchMethod.bind(this);
   }
-  
+
   componentDidMount(){
     this.setState({searchResult: this.searchMethod(this.state.searchRequest)})
   }
@@ -28,12 +28,12 @@ class Search extends React.Component {
       searchResult: this.searchMethod(event.target.value)
     });
   }
-  
+
   searchMethod(searchRequest) {
     return bottles
       .filter(({name}) => name.toLowerCase().includes(searchRequest.toLowerCase()) )
       .sort((a,b) => a.name > b.name)
-      .slice(0, 5);
+      .slice(0, this.state.searchResultLimit);
   }
 
   render() {

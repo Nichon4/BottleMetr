@@ -3,58 +3,56 @@ globals {
 }
 
 .App {
-  height: 100%;
-  width: 375px;
-  background-color: #000000;
-  text-align: left;
+    height: 100%;
+    width: 375px;
+    background-color: #000000;
+    text-align: left;
 }
 
 .App-logo {
-  height: 40px;
-  position: relative;
-  top: 4px;
-  border: 10px;
+    height: 40px;
+    position: relative;
+    top: 4px;
+    border: 10px;
 }
 
 .App-header {
-  background-color: #000000;
-  display: flex;
-  flex-direction: column;
-  align-items: left;
-  justify-content: left;
-  padding-top: 10px;
-  padding-left: 10px;
-  padding-bottom: 0px;
-  font-size: 30px;
-  text-decoration: none;
-  color: white;
+    background-color: #000000;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: left;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 0px;
+    font-size: 30px;
+    text-decoration: none;
+    color: white;
 }
 .App-header:visited {
-  text-decoration: none;
+    text-decoration: none;
 }
 .App-header * {
-  margin: 0;
+    margin: 0;
 }
 
 .App-link {
-  padding-top: 10px;
-  padding-bottom: 10px;
-  text-decoration: none;
+    text-decoration: none;
 }
 .App-link:visited {
-  text-decoration: none;
-  color: #ffffff;
+    text-decoration: none;
+    color: #ffffff;
 }
 
 .MainMenu {
-  background-color: #8E8E93;
+    background-color: #8E8E93;
 }
 
 @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }

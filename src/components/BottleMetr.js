@@ -47,23 +47,23 @@ class BottleMetr extends React.Component {
     )
   }
   
-  mesureReduceF() {
+  mesureReduceF(postion) {
     return this.bottle
       .measures
       .reduce( (acc, {h,v}, idx, list) =>
-          this.state.deltaPosition.y * this.Y_INVERTATION > h  ? [{h,v}, list[idx+1]] : acc,
+          postion * this.Y_INVERTATION > h  ? [{h,v}, list[idx+1]] : acc,
           []
       )
   }
   
-  calculateBottleBase() {
-    return this.state.deltaPosition.y !== 0
-      ? this.mesureReduceF()
+  calculateBottleBase(postion) {
+    return postion !== 0
+      ? this.mesureReduceF(postion)
       : [head(this.bottle.measures), last(this.bottle.measures)];
   }
   
   roundBottleLiqLevel(postion){
-    const measureBase = this.calculateBottleBase();
+    const measureBase = this.calculateBottleBase(postion);
     const k = this.layoutGraphK(measureBase);
     return Math.round(k*postion + k * head(measureBase).h + head(measureBase).v)
   }

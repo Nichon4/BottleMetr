@@ -4,6 +4,7 @@ import React from "react";
 
 
 export const BottleUl = styled.ul`
+  margin: 0;
   background-color: #8E8E93;
   list-style: none;
   padding-left: 0px;

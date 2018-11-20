@@ -4,24 +4,24 @@ import { MenuItem, MenuElement } from '../layout/MenuList'
 
 const menuItems = [
   { name: "BottleMetr",
-    link: "BottleMetr"
+    link: "/BottleMetr"
   },
   { name: "Bottle List",
-    link: "BottleList",
+    link: "/BottleList",
     icon: (<IoIosListBox />)
   },
   { name: "Your Inventory",
-    link: "Inventory",
+    link: "/Inventory",
     icon: (<IoIosBook />)
   },
   { name: "About",
-    link: "about",
+    link: "/about",
     icon: (<IoIosInformationCircle />)
   }
 ];
 
-const MenuList = () => (
-  <MenuItem>
+const MenuList = (onClickProps) => (
+  <MenuItem onClick={onClickProps}>
     {
       menuItems.map((props) =>
         <MenuElement key={props.link} {...props}/> )

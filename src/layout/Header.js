@@ -1,6 +1,7 @@
-import styled from 'styled-components';
-import React from 'react';
-import logo from '../logo.svg';
+import styled from 'styled-components'
+import React from 'react'
+import { Link } from 'react-router-dom'
+import logo from '../logo.svg'
 
 const HeaderLogo = styled.img`
   height: 40px;
@@ -13,23 +14,32 @@ const HeaderIcoSpan = styled.span`
 `;
 
 const HeaderBox = styled.div`
+  display: inline-block;
+  position: relative;
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
 `;
 
 export const AppHeader = styled.div`
   background-color: black;
-  display: flex;
+  display: block;
   flex-direction: column;
-  align-items: start;
+  align-items: normal;
   justify-content: start;
-  font-size: calc(10px + 2vmin);
+  font-size: 30px;
   color: white;
-  margin-left: 10px;
+  height: 100px;
 `;
 
 
 export const Header = ({text}) => (
   <HeaderBox>
-    <HeaderLogo src={logo} alt={"logo"} />
-    <HeaderIcoSpan> {text} </HeaderIcoSpan>
+    <Link to="/" className="App-link">
+      <div>
+        <HeaderLogo src={logo} alt={"logo"} />
+        <HeaderIcoSpan> {text} </HeaderIcoSpan>
+      </div>
+    </Link>
   </HeaderBox>
 );
