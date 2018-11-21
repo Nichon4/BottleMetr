@@ -6,7 +6,7 @@ import {showMenu} from "./actions";
 import { SandwichBox, SandwichSwitcher } from "./Layout";
 
 const mapStateToProps = state => ({
-  isShown: state.sandwichSwitch.sandwichVisible
+  isShown: state.sandwichSwitchR.sandwichVisible
 })
 
 const mapDispatchToProps = dispatch => ({

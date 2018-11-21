@@ -1,6 +1,7 @@
 import React from 'react';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
+import reducer from './reducers';
 import './App.css';
 import { Route } from 'react-router-dom';
 import MainMenu from './components/MainMenu.js';
@@ -10,10 +11,10 @@ import Search from './components/Search/';
 import BottleMetr from './components/BottleMetr.js';
 import BottleList from './components/BottleList.js';
 import { SandwichMenuButton, SandwichMenu } from './components/SandwichMenu/SandwichMenu.js';
-import sandwichSwitchR from './components/SandwichMenu/reducers';
 import { Header, AppHeader } from "./layout/Header";
 
-const store = createStore(sandwichSwitchR);
+const store = createStore(reducer)
+console.log(store.getState())
 
 const App = ({location}) => (
   <Provider store={store}>

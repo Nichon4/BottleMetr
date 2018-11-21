@@ -1,6 +1,8 @@
 import React from 'react';
 import {DebounceInput} from 'react-debounce-input';
-import {IoIosSearch} from 'react-icons/io';
+import {IoIosSearch } from 'react-icons/io';
+import { SearchFilter } from "./Filter/Filter";
+
 
 class SearchInput extends React.Component {
 
@@ -20,6 +22,7 @@ class SearchInput extends React.Component {
           value={this.props.value}
           inputRef={(searchInput) => { this.searchInput = searchInput}}
           onChange={this.props.onChange} />
+        <SearchFilter />
       </div>
     )
   }
