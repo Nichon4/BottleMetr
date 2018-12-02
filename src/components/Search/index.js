@@ -11,7 +11,7 @@ class Search extends React.Component {
     this.state = {
       searchRequest: "",
       searchResult: [],
-      searchResultLimit: 5
+      searchResultLimit: 10
     };
 
     this.handeSearchInputChange = this.handeSearchInputChange.bind(this);

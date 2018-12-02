@@ -18,7 +18,9 @@
       }
     ],
     "miniImg": "/img/bacardi-Carta-Blanca_mini.png",
-    "name": "Bacardi Carta Blanca 1l"
+    "name": "Bacardi Carta Blanca 1l",
+    "type": "Rum",
+    "vol": 1000
   },
   {
     "link": "bushmills_1l",
@@ -46,8 +48,10 @@
         "v": 700
       }
     ],
+    "name": "Bushmills 1l",
     "miniImg": "/img/no_mini.png",
-    "name": "Bushmills 1l"
+    "type": "Whiskey",
+    "vol": 1000
   },
   {
     "link": "jameson_07",
@@ -75,8 +79,10 @@
         "v": 700
       }
     ],
+    "name": "Jameson 0,7l",
     "miniImg": "/img/no_mini.png",
-    "name": "Jameson 0,7l"
+    "type": "Whiskey",
+    "vol": 700
   },
   {
     "link": "jameson_10",
@@ -104,8 +110,10 @@
         "v": 700
       }
     ],
+    "name": "Jameson 1l",
     "miniImg": "/img/no_mini.png",
-    "name": "Jameson 1l"
+    "type": "Whiskey",
+    "vol": 1000
   },
   {
     "link": "kilbeggan_07l",
@@ -134,7 +142,9 @@
       }
     ],
     "miniImg": "/img/kilbeggan_mini.png",
-    "name": "Kilbeggan 0,7l"
+    "name": "Kilbeggan 0,7l",
+    "type": "Whiskey",
+    "vol": 700
   },
   {
     "link": "tullamore",
@@ -162,7 +172,9 @@
         "v": 700
       }
     ],
+    "name": "Tullamore 0,7l",
     "miniImg": "/img/no_mini.png",
-    "name": "Tullamore 0,7l"
+    "type": "Whiskey",
+    "vol": 700
   }
 ]

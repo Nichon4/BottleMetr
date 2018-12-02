@@ -1,29 +1,25 @@
-import { combineReducers } from 'redux';
+//import { combineReducers } from 'redux';
 import { SHOW_FILTER, HIDE_FILTER} from "./actions";
 
 const initialStore = {
-  searchFilterActive: false
+  searchFilterShow: false
 }
 
-function searchFilterSwitch(state = initialStore, action) {
+export default function searchFilterSwitch(state = initialStore, action) {
   switch (action.type) {
     case SHOW_FILTER:
       return {
         ...state,
-        searchFilterActive: true
+        searchFilterShow: true
       }
     case HIDE_FILTER:
       return {
         ...state,
-        searchFilterActive: false
+        searchFilterShow: false
       }
     default:
       return state
   }
 }
 
-const searchFilterSwitchR = combineReducers({
-  searchFilterSwitch
-})
 
-export default searchFilterSwitchR

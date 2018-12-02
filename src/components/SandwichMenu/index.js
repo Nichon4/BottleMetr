@@ -1,4 +1,4 @@
 import { createStore } from 'redux'
-import sandwichSwitchR from './reducers'
+import sandwichSwitch from './reducers'
 
-const store = createStore(sandwichSwitchR)
+const store = createStore(sandwichSwitch)
