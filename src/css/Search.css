@@ -5,19 +5,14 @@ div>.SearchField {
   border-radius: 7px;
   position: relative;
   top: 0;
-  left: 10px;
+  left: 0px;
   height: 23px;
   width: 348px;
   font-size: 15px;
   text-indent: 0px;
   align-items: center;
 }
-div>.SearchField>input {
-  padding-left: 5px;
-}
-div>.SearchField * {
-  padding-left: 10px;
-}
+
 
 .SearchInput {
   background-color: rgba(0, 0, 0, 0.0);

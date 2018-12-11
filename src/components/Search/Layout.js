@@ -1,20 +1,36 @@
-import styled from 'styled-components';
+import React from 'react';
+import styled from 'styled-components'
 import {Link} from "react-router-dom";
-import React from "react";
 
+export const SearchInputDiv = styled.div`
+  display: block;
+  background:  rgba(142, 142, 147, 0.15);
+  color: #8E8E93;
+  border-radius: 7px;
+  position: relative;
+  left: 10px;
+  height: 23px;
+  width: 345px;
+  font-size: 15px;
+  text-indent: 0px;
+  align-items: center;
+  text-decoration: none;
+  padding-left: 10px;
+  `;
 
-export const BottleUl = styled.ul`
+export const SearchResultUl = styled.ul`
   position: absolute;
   top: 100px;
-  margin: 0;
   background-color: #8E8E93;
+  color: white;
   list-style: none;
+  list-style-type: none;
   padding-left: 0px;
   height: 450px;
   width: 375px;
 `;
 
-const BottleLi = styled.li`
+const SearchResultLi = styled.li`
   margin: 2px 0 0 0;
   padding-top: 5px;
   padding-bottom: 2px;
@@ -45,11 +61,11 @@ const StyledLink = styled(Link)`
   color: white;
 `;
 
-export const BottleListItem = ({name, link, img}) => (
-  <StyledLink to={`BottleMetr/${link}`}>
-    <BottleLi>
+export const ListItem = ({name, link, img}) => (
+  <StyledLink to={`${link}`}>
+    <SearchResultLi>
       <BottleImg src={img} alt={'bottleImage'}/>
       <BottleSpan>{name}</BottleSpan>
-    </BottleLi>
+    </SearchResultLi>
   </StyledLink>
 )

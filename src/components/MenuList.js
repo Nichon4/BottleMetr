@@ -3,9 +3,6 @@ import { IoIosListBox, IoIosBook, IoIosInformationCircle } from 'react-icons/io'
 import { MenuItem, MenuElement } from '../layout/MenuList'
 
 const menuItems = [
-  { name: "BottleMetr",
-    link: "/BottleMetr"
-  },
   { name: "Bottle List",
     link: "/BottleList",
     icon: (<IoIosListBox />)
@@ -20,8 +17,8 @@ const menuItems = [
   }
 ];
 
-const MenuList = (onClickProps) => (
-  <MenuItem onClick={onClickProps}>
+const MenuList = () => (
+  <MenuItem>
     {
       menuItems.map((props) =>
         <MenuElement key={props.link} {...props}/> )

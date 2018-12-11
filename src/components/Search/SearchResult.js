@@ -1,16 +1,16 @@
 import React from 'react';
-import ListItem from "./ListItem";
+import { ListItem, SearchResultUl } from "./Layout";
 
 
 const SearchResult =({searchResult}) => (
   <div>
-    <ul className="SearchResult">
+    <SearchResultUl>
       {
         searchResult.map( ({link, name, miniImg}) =>
           <ListItem key={link} name={name} link={`BottleMetr/${link}`} img={miniImg} />
         )
       }
-    </ul>
+    </SearchResultUl>
   </div>
 );
 

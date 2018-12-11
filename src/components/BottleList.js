@@ -1,7 +1,7 @@
 import React from 'react';
 import bottles from "../data/bottles.json";
 import { BottleListItem, BottleUl } from "../layout/BottleList";
-
+//TODO: edit bottle list
 // TODO remove sorting and remap
 const BottleList = () => {
   const bottleList = bottles

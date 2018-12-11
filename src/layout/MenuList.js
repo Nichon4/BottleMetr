@@ -11,6 +11,7 @@ const StyledLink = styled(Link)`
 `;
 
 export const MenuItem = styled.ul`
+  top: 100px;
   position: absolute;
   width: 375px;
   height: 450px;
@@ -24,15 +25,17 @@ export const MenuItem = styled.ul`
 `;
 
 const MenuItemLi = styled.li`
-  height: 32px;
+  height: 30px;
   background-color: #8E8E93;
   margin: 0 0 2px 0;
   text-decoration: none;
   font-size: 20px;
   padding-left: 5px;
+  padding-top: 5px;
   &:visited {
     text-decoration: none;
   }
+  vertical-align: middle;
 `;
 
 export const MenuElement = ({name, link, icon}) => (

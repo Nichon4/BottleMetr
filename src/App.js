@@ -20,7 +20,7 @@ const App = ({location}) => (
   <Route>
     <div className="App">
       <AppHeader>
-        { (location.pathname !== "/" ) ? <SandwichMenuButton /> : null }
+        <SandwichMenuButton location={location.pathname} />
 
           <Header text={"BottleMetr"} className="App-link" />
 
@@ -30,9 +30,10 @@ const App = ({location}) => (
       <Route path="/about" component={About} />
       <Route path="/Search" component={Search} />
       <Route path="/BottleList" component={BottleList} />
+      <Route path="/Inventory" component={About} />
       <Route path="/BottleMetr/:bottle" render={(props) => <BottleMetr {...props} /> } />
       <Route exact path="/BottleMetr/" render={(props) => <BottleMetr {...props} /> } />
-      { (location.pathname !== "/" ) ?  <SandwichMenu/> : null }
+      <SandwichMenu/>
     </div>
   </Route>
   </Provider>

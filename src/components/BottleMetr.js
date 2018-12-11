@@ -7,7 +7,7 @@ import {
   DragMeter,
   DragImg
 } from "../layout/Dragable";
-
+//TODO: add "save current volume"
 class BottleMetr extends React.Component {
   
   constructor(props){
@@ -61,7 +61,7 @@ class BottleMetr extends React.Component {
       ? this.mesureReduceF(postion)
       : [head(this.bottle.measures), last(this.bottle.measures)];
   }
-  
+  //TODO: rework in cubic-spline
   roundBottleLiqLevel(postion){
     const measureBase = this.calculateBottleBase(postion);
     const k = this.layoutGraphK(measureBase);

@@ -13,20 +13,18 @@ const mapDispatchToProps = dispatch => ({
     toggleSandwich: (isShown) => dispatch(showMenu(isShown))
 })
 
-const SandwichMenu1 = ({isShown, props}) => {
-  console.log(isShown);
+const SandwichMenu1 = ({isShown, toggleSandwich}) => {
     return (
-        <SandwichBox isShown={isShown}>
-            <MenuList onClick={() => props.toggleSandwich(props.isShown)}/>
+        <SandwichBox isShown={isShown} onClick={() => toggleSandwich(isShown)}>
+            <MenuList />
         </SandwichBox>
     )
 }
 
 
 const SandwichMenuButton1 = (props) => {
-  console.log(props);
   return (
-    <SandwichSwitcher onClick={() => props.toggleSandwich(props.isShown)}>
+    <SandwichSwitcher onClick={() => props.toggleSandwich(props.isShown)} location={props.location}>
       <IoIosMenu />
     </SandwichSwitcher>
   )
@@ -34,4 +32,4 @@ const SandwichMenuButton1 = (props) => {
 
 
 export const SandwichMenuButton = connect(mapStateToProps, mapDispatchToProps)(SandwichMenuButton1);
-export const SandwichMenu = connect(mapStateToProps, null)(SandwichMenu1);
+export const SandwichMenu = connect(mapStateToProps, mapDispatchToProps)(SandwichMenu1);

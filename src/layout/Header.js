@@ -3,14 +3,12 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import logo from '../logo.svg'
 
+
 const HeaderLogo = styled.img`
   height: 40px;
   position: relative;
   top: 4px;
   border: 10px;
-`;
-const HeaderIcoSpan = styled.span`
-  padding-left: 5px;
 `;
 
 const HeaderBox = styled.div`
@@ -29,16 +27,15 @@ export const AppHeader = styled.div`
   justify-content: start;
   font-size: 30px;
   color: white;
-  height: 100px;
+  height: 70px;
 `;
-
+//TODO fix appheader height
 
 export const Header = ({text}) => (
   <HeaderBox>
     <Link to="/" className="App-link">
       <div>
         <HeaderLogo src={logo} alt={"logo"} />
-        <HeaderIcoSpan> {text} </HeaderIcoSpan>
       </div>
     </Link>
   </HeaderBox>
