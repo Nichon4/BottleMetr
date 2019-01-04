@@ -40,16 +40,24 @@ const BottleSpan = styled.span`
   padding-top: 4px;
 `;
 
+const BottleValue = styled.span`
+  font-size: 15px;
+  position: absolute;
+  right: 10px;
+  padding-top: 10px;
+`;
+
 const StyledLink = styled(Link)`
   text-decoration: none;
   color: white;
 `;
 
-export const BottleListItem = ({name, link, img}) => (
+export const BottleListItem = ({name, link, img, curValue}) => (
   <StyledLink to={`BottleMetr/${link}`}>
     <BottleLi>
       <BottleImg src={img} alt={'bottleImage'}/>
       <BottleSpan>{name}</BottleSpan>
+      <BottleValue>{curValue ? `${curValue}ml` : null }</BottleValue>
     </BottleLi>
   </StyledLink>
 )

@@ -1,20 +1,23 @@
 import React from 'react';
 import Draggable from 'react-draggable';
-import bottles from "../data/bottles.json";
+import bottles from "../../data/bottles.json";
 import { head, last } from 'ramda';
 import {
   DragIdentLine,
   DragMeter,
-  DragImg
-} from "../layout/Dragable";
+  DragImg,
+  SaveButton
+} from "./Layout";
+import { saveData } from "../dataTransfer";
 //TODO: add "save current volume"
+
 class BottleMetr extends React.Component {
   
   constructor(props){
     super(props);
     
     this.curBottle = ( this.props.match.params.bottle == null ) ? "kilbeggan_07l" : this.props.match.params.bottle ;
-    
+
     this.Y_INVERTATION = -1;
     
     // TODO: REMOVE AFTER BACKEND CONNECTION
@@ -31,6 +34,7 @@ class BottleMetr extends React.Component {
     this.mesureReduceF = this.mesureReduceF.bind(this);
     this.calculateBottleBase = this.calculateBottleBase.bind(this);
     this.handleDrag = this.handleDrag.bind(this);
+    this.saveMeasure = this.saveMeasure.bind(this);
   }
   
   handleDrag(e, {deltaX, deltaY}) {
@@ -67,11 +71,30 @@ class BottleMetr extends React.Component {
     const k = this.layoutGraphK(measureBase);
     return Math.round(k*postion + k * head(measureBase).h + head(measureBase).v)
   }
+
+  saveMeasure() {
+    let obj = "favorites";
+    let key = this.curBottle;
+    let param = "value"
+    let value = this.state.bottleValue;
+    try {
+      saveData(obj, key, param, value)
+    }
+    catch (e) {
+      return e;
+    }
+    return true;
+  }
   
   render() {
     return(
       <DragMeter>
         <DragImg src={this.bottle.img} alt="bottleImage" />
+        <SaveButton
+          onClick={this.saveMeasure}
+          >
+          Save
+        </SaveButton>
         <div>
           <Draggable
             axis="y"

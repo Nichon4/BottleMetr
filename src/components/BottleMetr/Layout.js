@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import React from 'react';
-import MeasureLine from "../img/MeasureLine";
+import MeasureLine from "../../img/MeasureLine";
 
 const DragSpan = styled.span`
   color: #ff9500;
@@ -39,3 +39,13 @@ export const DragIdentLine = ({value, position, ...props}) =>  (
       <MeasureLine />
     </DragSlider>
   );
+
+export const SaveButton = styled.button`{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: none;
+  background-color: black;
+  color: darkorange;
+  font-size: 20px;
+}`
