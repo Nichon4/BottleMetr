@@ -31,9 +31,6 @@ export function saveData(obj, key, param, value) {
     object[key][param] = value;
   }
   localStorage.setItem(obj, jsonStringify(object));
-// TODO: remove before merge
-  object = jsonParse(localStorage.getItem(obj));
-  console.log(object[key]);
 }
 
 export function loadData(obj) {
