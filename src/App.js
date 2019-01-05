@@ -7,8 +7,9 @@ import MainMenu from './components/MainMenu.js';
 import About from './components/About.js';
 import SearchField from './components/SearchField.js';
 import Search from './components/Search/';
-import BottleMetr from './components/BottleMetr.js';
+import BottleMetr from './components/BottleMetr/BottleMetr.js';
 import BottleList from './components/BottleList.js';
+import Inventory from './components/Inventory';
 import { SandwichMenuButton, SandwichMenu } from './components/SandwichMenu/SandwichMenu.js';
 import sandwichSwitchR from './components/SandwichMenu/reducers';
 import { Header, AppHeader } from "./layout/Header";
@@ -30,7 +31,7 @@ const App = ({location}) => (
       <Route path="/about" component={About} />
       <Route path="/Search" component={Search} />
       <Route path="/BottleList" component={BottleList} />
-      <Route path="/Inventory" component={About} />
+      <Route path="/Inventory" component={Inventory} />
       <Route path="/BottleMetr/:bottle" render={(props) => <BottleMetr {...props} /> } />
       <Route exact path="/BottleMetr/" render={(props) => <BottleMetr {...props} /> } />
       <SandwichMenu/>
