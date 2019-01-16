@@ -22,16 +22,6 @@ class BottleMetr extends React.Component {
     // TODO: REMOVE AFTER BACKEND CONNECTION
     this.bottle = bottles.find( obj => obj.link === this.curBottle );
 
-    this.measures = this.bottle.measures.reduce((acc, {h, v}) => (
-      {
-        h: acc.h.add(h),
-        v: acc.v.add(v)
-      }
-    ), {h: new Set(), v: new Set()});
-
-    this.h = Array.from(this.measures.h);
-    this.v = Array.from(this.measures.v);
-
     this.state = {
       activeDrags: 0,
       deltaPosition: {
@@ -41,8 +31,6 @@ class BottleMetr extends React.Component {
     };
 
     this.spline = require('cubic-spline');
-    this.mesureReduceF = this.mesureReduceF.bind(this);
-    this.calculateBottleBase = this.calculateBottleBase.bind(this);
     this.handleDrag = this.handleDrag.bind(this);
     this.saveMeasure = this.saveMeasure.bind(this);
     this.splineLevel = this.splineLevel.bind(this);
@@ -57,7 +45,8 @@ class BottleMetr extends React.Component {
   }
 
   splineLevel(position) {
-    return Math.round(this.spline(-position, this.h, this.v));
+    let { h, v } = this.bottle.measuresR;
+    return Math.round(this.spline(-position, h, v));
   }
 
   saveMeasure() {

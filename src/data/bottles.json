@@ -18,7 +18,17 @@
       }
     ],
     "miniImg": "/img/bacardi-Carta-Blanca_mini.png",
-    "name": "Bacardi Carta Blanca 1l"
+    "name": "Bacardi Carta Blanca 1l",
+    "measuresR": {
+      "h": [
+        0,
+        262
+      ],
+      "v": [
+        0,
+        700
+      ]
+    }
   },
   {
     "link": "bushmills_1l",
@@ -47,7 +57,21 @@
       }
     ],
     "miniImg": "/img/no_mini.png",
-    "name": "Bushmills 1l"
+    "name": "Bushmills 1l",
+    "measuresR": {
+      "h": [
+        0,
+        112,
+        207,
+        262
+      ],
+      "v": [
+        0,
+        282,
+        564,
+        700
+      ]
+    }
   },
   {
     "link": "jameson_07",
@@ -76,7 +100,21 @@
       }
     ],
     "miniImg": "/img/no_mini.png",
-    "name": "Jameson 0,7l"
+    "name": "Jameson 0,7l",
+    "measuresR": {
+      "h": [
+        0,
+        112,
+        207,
+        262
+      ],
+      "v": [
+        0,
+        282,
+        564,
+        700
+      ]
+    }
   },
   {
     "link": "jameson_10",
@@ -105,7 +143,21 @@
       }
     ],
     "miniImg": "/img/no_mini.png",
-    "name": "Jameson 1l"
+    "name": "Jameson 1l",
+    "measuresR": {
+      "h": [
+        0,
+        112,
+        207,
+        262
+      ],
+      "v": [
+        0,
+        282,
+        564,
+        700
+      ]
+    }
   },
   {
     "link": "kilbeggan_07l",
@@ -134,7 +186,21 @@
       }
     ],
     "miniImg": "/img/kilbeggan_mini.png",
-    "name": "Kilbeggan 0,7l"
+    "name": "Kilbeggan 0,7l",
+    "measuresR": {
+      "h": [
+        0,
+        112,
+        207,
+        262
+      ],
+      "v": [
+        0,
+        282,
+        564,
+        700
+      ]
+    }
   },
   {
     "link": "tullamore",
@@ -163,6 +229,20 @@
       }
     ],
     "miniImg": "/img/no_mini.png",
-    "name": "Tullamore 0,7l"
+    "name": "Tullamore 0,7l",
+    "measuresR": {
+      "h": [
+        0,
+        112,
+        207,
+        262
+      ],
+      "v": [
+        0,
+        282,
+        564,
+        700
+      ]
+    }
   }
 ]
