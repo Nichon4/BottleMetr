@@ -1,9 +1,9 @@
-import { combineReducers } from 'redux';
+
 import { SHOW_MENU, HIDE_MENU} from "./actions";
 
 const initialStore = {
   sandwichVisible: false
-}
+};
 
 function sandwichSwitch(state = initialStore, action) {
   switch (action.type) {

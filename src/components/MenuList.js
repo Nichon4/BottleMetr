@@ -18,7 +18,7 @@ const menuItems = [
 ];
 
 const MenuList = () => (
-  <MenuItem>
+  <MenuItem >
     {
       menuItems.map((props) =>
         <MenuElement key={props.link} {...props}/> )
