@@ -20,8 +20,8 @@ const menuItems = [
   }
 ];
 
-const MenuList = (onClickProps) => (
-  <MenuItem onClick={onClickProps}>
+const MenuList = () => (
+  <MenuItem >
     {
       menuItems.map((props) =>
         <MenuElement key={props.link} {...props}/> )

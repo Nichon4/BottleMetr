@@ -1,25 +1,44 @@
-//import { combineReducers } from 'redux';
-import { SHOW_FILTER, HIDE_FILTER} from "./actions";
+
+import {createAction, handleActions} from "redux-actions";
+
+const toggleFilter = createAction("TOGGLE_FILTER");
+
+const setFilterTypes = createAction("SET_FILTER_TYPES");
+
+const clearFilters = createAction("CLEAR_FILTERS");
+
+export {toggleFilter, setFilterTypes, clearFilters};
+
 
 const initialStore = {
-  searchFilterShow: false
-}
+  searchFilterShow: false,
+  filterTypes: {}
+};
 
-export default function searchFilterSwitch(state = initialStore, action) {
-  switch (action.type) {
-    case SHOW_FILTER:
-      return {
+export const filterReducer = handleActions(
+  {
+    TOGGLE_FILTER: (state, action) => {
+      return ({
         ...state,
-        searchFilterShow: true
-      }
-    case HIDE_FILTER:
-      return {
+        searchFilterShow: !action.payload
+      })
+    },
+    SET_FILTER_TYPES: (state, action) => {
+      const {type, value} = action.payload;
+      return ({
         ...state,
-        searchFilterShow: false
-      }
-    default:
-      return state
-  }
-}
+        filterTypes: {
+          ...state.filterTypes,
+          [type]: value
+        }
+      })
+    },
+    CLEAR_FILTERS: (state) => ({
+      ...state,
+      filterTypes: {}
+    })
+  },
+  initialStore
+);
 
 

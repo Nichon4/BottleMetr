@@ -13,29 +13,32 @@ import BottleList from './components/BottleList.js';
 import { SandwichMenuButton, SandwichMenu } from './components/SandwichMenu/SandwichMenu.js';
 import { Header, AppHeader } from "./layout/Header";
 
-const store = createStore(reducer)
-console.log(store.getState())
+const store = createStore(
+  reducer,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+);
+console.log(store.getState());
 
 const App = ({location}) => (
   <Provider store={store}>
-  <Route>
-    <div className="App">
-      <AppHeader>
-        { (location.pathname !== "/" ) ? <SandwichMenuButton /> : null }
+    <Route>
+      <div className="App">
+        <AppHeader>
+          { (location.pathname !== "/" ) ? <SandwichMenuButton /> : null }
 
           <Header text={"BottleMetr"} className="App-link" />
 
-        { ((location.pathname !== "/") && (location.pathname !== "/BottleList")) ? null :  <SearchField/> }
-      </AppHeader>
-      <Route exact path="/" component={MainMenu} />
-      <Route path="/about" component={About} />
-      <Route path="/Search" component={Search} />
-      <Route path="/BottleList" component={BottleList} />
-      <Route path="/BottleMetr/:bottle" render={(props) => <BottleMetr {...props} /> } />
-      <Route exact path="/BottleMetr/" render={(props) => <BottleMetr {...props} /> } />
-      { (location.pathname !== "/" ) ?  <SandwichMenu/> : null }
-    </div>
-  </Route>
+          { ((location.pathname !== "/") && (location.pathname !== "/BottleList")) ? null :  <SearchField/> }
+        </AppHeader>
+        <Route exact path="/" component={MainMenu} />
+        <Route path="/about" component={About} />
+        <Route path="/Search" component={Search} />
+        <Route path="/BottleList" component={BottleList} />
+        <Route path="/BottleMetr/:bottle" render={(props) => <BottleMetr {...props} /> } />
+        <Route exact path="/BottleMetr/" render={(props) => <BottleMetr {...props} /> } />
+        { (location.pathname !== "/" ) ?  <SandwichMenu/> : null }
+      </div>
+    </Route>
   </Provider>
 );
 
