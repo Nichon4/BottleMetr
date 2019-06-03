@@ -23,7 +23,7 @@ const SearchFilterButtonCon = ({searchFilterShow, toggleSearchFilter}) => {
       <IoIosOptions/>
     </div>
   )
-}
+};
 
 
 const FilterOptions = ({type, ...props}) => {

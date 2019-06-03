@@ -1,4 +1,3 @@
-
 import { SHOW_MENU, HIDE_MENU} from "./actions";
 
 const initialStore = {
@@ -22,8 +21,5 @@ function sandwichSwitch(state = initialStore, action) {
   }
 }
 
-const sandwichSwitchR = combineReducers({
-  sandwichSwitch
-})
 
-export default sandwichSwitchR
+export default sandwichSwitch

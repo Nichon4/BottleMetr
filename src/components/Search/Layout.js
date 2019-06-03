@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import {Link} from "react-router-dom";
 
 export const SearchInputDiv = styled.div`
-  display: block;
+  display: flex;
   background:  rgba(142, 142, 147, 0.15);
   color: #8E8E93;
   border-radius: 7px;
@@ -19,8 +19,8 @@ export const SearchInputDiv = styled.div`
   `;
 
 export const SearchResultUl = styled.ul`
-  position: absolute;
-  top: 100px;
+  position: relative;
+  
   background-color: #8E8E93;
   color: white;
   list-style: none;
